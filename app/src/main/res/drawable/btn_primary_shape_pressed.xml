@@ -1,0 +1,21 @@
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetBottom="@dimen/button_primary_pressed_shape_inset"
+    android:insetLeft="@dimen/button_primary_pressed_shape_inset"
+    android:insetRight="@dimen/button_primary_pressed_shape_inset"
+    android:insetTop="@dimen/button_primary_pressed_shape_inset">
+    <layer-list>
+        <item android:drawable="@drawable/button_primary_shape_pressed_shadow" />
+        <item>
+            <shape android:shape="rectangle">
+                <corners android:radius="@dimen/abc_control_corner_material" />
+                <solid android:color="@color/colorPrimary" />
+            </shape>
+        </item>
+        <item>
+            <shape android:shape="rectangle">
+                <corners android:radius="@dimen/abc_control_corner_material" />
+                <solid android:color="@color/color_blackout_ten_percent" />
+            </shape>
+        </item>
+    </layer-list>
+</inset>

@@ -3,4 +3,6 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="color_control_normal">#1A000000</color>
+    <color name="color_blackout_ten_percent">#0A000000</color>
 </resources>

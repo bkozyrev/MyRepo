@@ -2,6 +2,7 @@ package com.bkozyrev.superchat.core.presentation.presenter;
 
 import android.support.annotation.NonNull;
 import com.bkozyrev.superchat.core.presentation.view.MvpView;
+import io.reactivex.disposables.CompositeDisposable;
 
 /**
  * Реализация базовой сущности Presenter
@@ -18,6 +19,8 @@ public class BasePresenter<V extends MvpView> {
     // ссылка на View
     private V mView;
 
+    private CompositeDisposable mCompositeDisposable;
+
     /**
      * Присоединение View к Presenter
      *
@@ -25,6 +28,8 @@ public class BasePresenter<V extends MvpView> {
      */
     public void attachView(@NonNull V view) {
         mView = view;
+
+        mCompositeDisposable = new CompositeDisposable();
 
         if (mIsFirstLaunch) {
             mIsFirstLaunch = false;
@@ -37,6 +42,15 @@ public class BasePresenter<V extends MvpView> {
      */
     public void detachView() {
         mView = null;
+        if (mCompositeDisposable != null && !mCompositeDisposable.isDisposed()) {
+            mCompositeDisposable.dispose();
+            mCompositeDisposable = null;
+        }
+    }
+
+    @NonNull
+    public CompositeDisposable getCompositeDisposable() {
+        return mCompositeDisposable;
     }
 
     /**

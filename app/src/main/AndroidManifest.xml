@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.bkozyrev.superchat"
+<manifest xmlns:tools="http://schemas.android.com/tools" package="com.bkozyrev.superchat"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:name=".core.ProjectApplication"
-        android:theme="@style/AppTheme">
-        <activity android:name=".chat.presentation.view.ChatActivity">
+            android:allowBackup="true"
+            android:fullBackupContent="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:name=".core.ProjectApplication"
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".chat.presentation.view.ChatActivity"/>
+        <activity android:name=".login.presentation.view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Button -->
+    <dimen name="button_primary_shape_inset">2dp</dimen>
+    <dimen name="button_primary_pressed_shape_inset">-2dp</dimen>
+</resources>

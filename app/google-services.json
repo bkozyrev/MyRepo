@@ -1,0 +1,60 @@
+{
+  "project_info": {
+    "project_number": "748059336336",
+    "firebase_url": "https://superchat-b45fc.firebaseio.com",
+    "project_id": "superchat-b45fc",
+    "storage_bucket": "superchat-b45fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748059336336:android:c1a9e09335ed78a8",
+        "android_client_info": {
+          "package_name": "com.bkozyrev.superchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748059336336-7c6falr6mq7pvj8jfrqia7bg7tqb1rqt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bkozyrev.superchat",
+            "certificate_hash": "7cf61d9213fb97c5f17a370c70037e85c5b53702"
+          }
+        },
+        {
+          "client_id": "748059336336-57uj2ceppgt6esv1sff2smjqgl3vvrs9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bkozyrev.superchat",
+            "certificate_hash": "9cce78623269d7d6f9a982272871d9ad68ac6d00"
+          }
+        },
+        {
+          "client_id": "748059336336-iglpfii2ueej8a9dj62si1tph9nk5rll.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bkozyrev.superchat",
+            "certificate_hash": "70d17550c531aada765fd810f20e0546ba0d304d"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw_M4m3cCaxlRMpjaaV_NCGPfJPvnW7B8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748059336336-tdd07r5eaunua41vpif8ntcvvnbh8pd8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
