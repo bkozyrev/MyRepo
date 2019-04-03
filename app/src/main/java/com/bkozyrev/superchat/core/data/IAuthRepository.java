@@ -1,6 +1,6 @@
-package com.bkozyrev.superchat.login.data;
+package com.bkozyrev.superchat.core.data;
 
-import com.bkozyrev.superchat.core.data.AuthState;
+import io.reactivex.Completable;
 import io.reactivex.Observable;
 
 /**
@@ -12,6 +12,13 @@ public interface IAuthRepository {
 
     /**
      * Подписаться на изменения состояния авторизации
+     *
+     * @return {@link Observable} с состоянием авторизации {@link AuthState}
      */
     Observable<AuthState> observeAuthState();
+
+    /**
+     * Произвести разлогин
+     */
+    void signOut();
 }

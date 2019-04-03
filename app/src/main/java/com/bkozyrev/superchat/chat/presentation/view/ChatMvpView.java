@@ -8,4 +8,9 @@ import com.bkozyrev.superchat.core.presentation.view.MvpView;
  * @author Kozyrev Boris
  */
 public interface ChatMvpView extends MvpView {
+
+    /**
+     * Пользователь произвел разлогин
+     */
+    void signOut();
 }

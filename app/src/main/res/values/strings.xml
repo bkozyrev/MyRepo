@@ -5,6 +5,9 @@
     <string name="login_button_text">Sign in</string>
 
     <string name="chat_screen_title">Chat</string>
+    <string name="chat_menu_hint">Options</string>
+
+    <string name="sign_out_button_text">Sign out</string>
 
     <!-- jеблозавры из гугла... -->
     <string name="default_web_client_id">748059336336-tdd07r5eaunua41vpif8ntcvvnbh8pd8.apps.googleusercontent.com</string>

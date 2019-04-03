@@ -1,5 +1,6 @@
 package com.bkozyrev.superchat.login.presentation.view;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -28,6 +29,10 @@ public class LoginActivity extends ToolbarActivity implements LoginView {
     LoginPresenter mLoginPresenter;
 
     private Button mSignInButton;
+
+    public static Intent newIntent(@NonNull Context context) {
+        return new Intent(context, LoginActivity.class);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

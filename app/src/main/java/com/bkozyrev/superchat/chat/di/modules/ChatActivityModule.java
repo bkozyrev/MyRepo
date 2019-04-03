@@ -2,6 +2,7 @@ package com.bkozyrev.superchat.chat.di.modules;
 
 import com.bkozyrev.superchat.chat.di.scopes.ChatScope;
 import com.bkozyrev.superchat.chat.presentation.presenter.ChatPresenter;
+import com.bkozyrev.superchat.login.domain.AuthInteractor;
 import dagger.Module;
 import dagger.Provides;
 
@@ -15,7 +16,7 @@ public interface ChatActivityModule {
 
     @Provides
     @ChatScope
-    static ChatPresenter provideChatPresenter() {
-        return new ChatPresenter();
+    static ChatPresenter provideChatPresenter(AuthInteractor authInteractor) {
+        return new ChatPresenter(authInteractor);
     }
 }

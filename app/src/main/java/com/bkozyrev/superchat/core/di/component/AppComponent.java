@@ -1,6 +1,7 @@
 package com.bkozyrev.superchat.core.di.component;
 
 import com.bkozyrev.superchat.core.ProjectApplication;
+import com.bkozyrev.superchat.core.di.modules.CommonModule;
 import com.bkozyrev.superchat.core.di.modules.InjectorsModule;
 import com.bkozyrev.superchat.core.di.modules.RxModule;
 import dagger.Component;
@@ -15,7 +16,7 @@ import javax.inject.Singleton;
  * @author Козырев Борис
  */
 @Singleton
-@Component(modules = {AndroidSupportInjectionModule.class, InjectorsModule.class, RxModule.class})
+@Component(modules = {AndroidSupportInjectionModule.class, InjectorsModule.class, RxModule.class, CommonModule.class})
 public interface AppComponent extends AndroidInjector<ProjectApplication> {
 
     @Component.Builder

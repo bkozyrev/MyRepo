@@ -1,7 +1,6 @@
-package com.bkozyrev.superchat.login.data;
+package com.bkozyrev.superchat.core.data;
 
 import android.support.annotation.NonNull;
-import com.bkozyrev.superchat.core.data.AuthState;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import io.reactivex.Observable;
@@ -17,7 +16,7 @@ public class AuthRepository implements IAuthRepository {
 
     private static final String GOOGLE_AUTH_PROVIDER = "google.com";
 
-    private FirebaseAuth mFirebaseAuth;
+    private final FirebaseAuth mFirebaseAuth;
 
     public AuthRepository(@NonNull FirebaseAuth firebaseAuth) {
         mFirebaseAuth = firebaseAuth;
@@ -50,5 +49,10 @@ public class AuthRepository implements IAuthRepository {
                 }
             });
         });
+    }
+
+    @Override
+    public void signOut() {
+        mFirebaseAuth.signOut();
     }
 }

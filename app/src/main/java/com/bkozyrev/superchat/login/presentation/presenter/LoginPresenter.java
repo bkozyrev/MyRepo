@@ -2,7 +2,7 @@ package com.bkozyrev.superchat.login.presentation.presenter;
 
 import android.support.annotation.NonNull;
 import com.bkozyrev.superchat.core.presentation.presenter.BasePresenter;
-import com.bkozyrev.superchat.login.domain.LoginInteractor;
+import com.bkozyrev.superchat.login.domain.AuthInteractor;
 import com.bkozyrev.superchat.login.presentation.view.LoginView;
 
 /**
@@ -12,10 +12,10 @@ import com.bkozyrev.superchat.login.presentation.view.LoginView;
  */
 public class LoginPresenter extends BasePresenter<LoginView> {
 
-    private LoginInteractor mLoginInteractor;
+    private AuthInteractor mAuthInteractor;
 
-    public LoginPresenter(@NonNull LoginInteractor loginInteractor) {
-        mLoginInteractor = loginInteractor;
+    public LoginPresenter(@NonNull AuthInteractor authInteractor) {
+        mAuthInteractor = authInteractor;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class LoginPresenter extends BasePresenter<LoginView> {
 
     private void observeAuthState() {
         getCompositeDisposable().add(
-                mLoginInteractor
+                mAuthInteractor
                         .observeAuthState()
                         .subscribe(
                                 authState -> getView().authStateChanged(authState),
